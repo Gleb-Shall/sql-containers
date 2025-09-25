@@ -191,6 +191,11 @@ The project includes simple CI with GitHub Actions for build and test verificati
 
 The project includes comprehensive documentation generated with Doxygen:
 
+### Online Documentation
+- **GitHub Pages**: [View Live Documentation](https://gleb-shall.github.io/sql-containers/)
+- **Auto-deployed**: Documentation is automatically updated on every push to main branch
+
+### Local Documentation
 ```bash
 # Generate documentation
 make docs
@@ -198,6 +203,13 @@ make docs
 # View documentation
 open docs/html/index.html
 ```
+
+### Documentation Features
+- **Complete API Reference**: All classes, methods, and functions documented
+- **Code Examples**: Usage examples for all major features
+- **Performance Analysis**: Time and space complexity information
+- **Search Functionality**: Full-text search across all documentation
+- **Cross-references**: Links between related functions and classes
 
 ## License
 
