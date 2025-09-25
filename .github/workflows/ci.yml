@@ -18,16 +18,13 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y g++ make doxygen
+        sudo apt-get install -y g++ make
 
     - name: Build project
       run: make clean && make all
 
     - name: Run tests
       run: make test
-
-    - name: Generate documentation
-      run: make docs
 
     - name: Check build artifacts
       run: |
@@ -40,22 +37,9 @@ jobs:
           exit 1
         fi
 
-    - name: Check documentation
-      run: |
-        echo "Checking documentation..."
-        ls -la docs/html/
-        if [ -f "docs/html/index.html" ]; then
-          echo "✓ Documentation generated"
-        else
-          echo "✗ Documentation not found"
-          exit 1
-        fi
-
     - name: Upload build artifacts
       uses: actions/upload-artifact@v4
       with:
         name: build-artifacts
-        path: |
-          build/
-          docs/html/
+        path: build/
         retention-days: 7
