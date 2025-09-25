@@ -10,10 +10,16 @@ Homework SQL-containers
 
 ## Build
 
-make          # Build project
-make test     # Run tests
-make clean    # Clean build files
-make help     # Show help
+make          
+
+#### Run tests
+make test
+
+#### Clean build files
+make clean
+
+#### Show help
+make help
 
 
 ## doxify
